@@ -1,0 +1,18 @@
+    <form [formGroup]="forma">
+        <mat-form-field>
+          <input matInput placeholder="Titulo" formControlName="titulo">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <textarea rows="3" matInput placeholder="Descripción" formControlName="desc"></textarea>
+        </mat-form-field>
+
+        <div mat-dialog-actions>
+            <button mat-raised-button (click)="guardarCambios()">Guardar</button>
+            <button mat-raised-button (click)="onNoClick()" 
+                    [mat-dialog-close]="data.animal" 
+                    color="primary" 
+                    cdkFocusInitial>Cerrar</button>
+        </div>
+    
+      </form>    
